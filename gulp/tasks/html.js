@@ -1,4 +1,5 @@
 // import fileinclude from 'gulp-file-include'; // если используем fileinclude, а не pug
+// import htmlMin from 'gulp-htmlmin'; // если используем fileinclude, а не pug
 import pug from 'gulp-pug'; // если используем pug, а не fileinclude
 import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
@@ -40,6 +41,15 @@ export const html = () => {
                     }),
                 ),
             )
+            // .pipe(
+            //     app.plugins.if(
+            //         app.isBuild,
+            //         htmlMin({
+            //             collapseWhitespace: true, // удаляем все переносы
+            //             removeComments: true, // удаляем все комментарии
+            //         }),
+            //     ),
+            // ) // если используем fileinclude, а не pug
             .pipe(app.gulp.dest(app.path.build.html))
             .pipe(app.plugins.browsersync.stream())
     );
