@@ -1,5 +1,4 @@
-// import fileinclude from 'gulp-file-include'; // если используем fileinclude, а не pug
-import pug from 'gulp-pug'; // если используем pug, а не fileinclude
+import pug from 'gulp-pug';
 import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
 
@@ -15,13 +14,12 @@ export const html = () => {
                     }),
                 ),
             )
-            // .pipe(fileinclude()) // если используем fileinclude, а не pug
             .pipe(
                 pug({
                     pretty: true, // сжатие html файлов
                     verbose: true, // показать в терминале какой файл обработан
                 }),
-            ) // если используем pug, а не fileinclude
+            )
             .pipe(app.plugins.replace(/@img\//g, 'images/'))
             .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
             .pipe(
