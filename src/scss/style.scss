@@ -1,0 +1,24 @@
+@use 'utils';
+@use './modules/fonts';
+@use './modules/keyframes';
+@use './modules/global';
+
+// example
+body {
+    font-family: Roboto;
+    color: aquamarine;
+    background-image: url('@img/example.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+
+    h1 {
+        font-weight: 400;
+    }
+
+    main {
+        span img {
+            width: 200px;
+        }
+    }
+}
