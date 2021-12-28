@@ -18,8 +18,7 @@ export const path = {
     },
     src: {
         files: `${srcFolder}/files/**/*.*`,
-        // html: `${srcFolder}/*.html`, // если используем fileinclude, а не pug
-        html: `${srcFolder}/*.pug`, // если используем pug, а не fileinclude
+        html: `${srcFolder}/*.html`,
         scss: `${srcFolder}/scss/style.scss`,
         js: `${srcFolder}/js/app.js`,
         images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp}`,
@@ -28,8 +27,7 @@ export const path = {
     },
     watch: {
         files: `${srcFolder}/files/**/*.*`,
-        // html: `${srcFolder}/**/*.html`, // если используем fileinclude, а не pug
-        html: `${srcFolder}/**/*.pug`, // если используем pug, а не fileinclude
+        html: `${srcFolder}/**/*.html`,
         scss: `${srcFolder}/scss/**/*.scss`,
         js: `${srcFolder}/js/**/*.js`,
         images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
